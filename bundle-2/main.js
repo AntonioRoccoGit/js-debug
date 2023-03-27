@@ -43,12 +43,12 @@
 // () => num % 2 === 0 ? num + 5 && num ?!
 
 // ESERCIZIO 3
-function loopToFive() {
-    for (let i = 0; i < 5; i++) {
-        console.log(i);
-    }
-}
-console.log(loopToFive());
+// function loopToFive() {
+//     for (let i = 0; i < 5; i++) {
+//         console.log(i);
+//     }
+// }
+// console.log(loopToFive());
 
 //ad ogni iterazione il codice mi fa un log di i
 
@@ -56,15 +56,26 @@ console.log(loopToFive());
 
 //non ho capito da cosa è dovuta la scritta undefined in console
 
-// // ESERCIZIO 4 (suggerimento: ci sono 8 errori)
-// function displayEvenNumbers() {
-//     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
-//     let evenNumbers = [];
-//     for (let i = 0; i < numbers.length - 1; i++;) {
-//         if (numbers % 2 = 0); {
-//             evenNumbers.push(i);
-//         }
-//         return evenNumbers;
-//     }
-// }
-// displayEvenNumbers(); // [2,4,6,8]
+// ESERCIZIO 4 (suggerimento: ci sono 8 errori)
+function displayEvenNumbers() {
+    let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+    let evenNumbers = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            evenNumbers.push(numbers[i]);
+        }
+    }
+    return evenNumbers;
+}
+displayEvenNumbers(); // [2,4,6,8]
+console.log(displayEvenNumbers());
+
+// dato un array di numeri verifica quali sono i pari e restituiscili in un nuovo array
+
+//qui i bug erano vari, intanto se voglio scorrere tutto l'array ho bisogno che che la condizione
+//sia (i < numbers.length) e non (numbers.length -1)
+//il return deve stare al di fuori del ciclo for altrimenti mi si blocca la funzione dopo il 
+//primo numero dispari
+//c'era un ";" alla fine della condizione dell if all'interno del ciclo for
+
+//le variabilki che rappresentano l'array possono essere di tipo const
