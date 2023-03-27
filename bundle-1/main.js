@@ -52,13 +52,13 @@
 
 
 // // ESERCIZIO 3
-function addNumbers() {
-    const userNumber = parseInt(prompt('Inserisci un numero'));
-    const total = userNumber + 12;
+// function addNumbers() {
+//     const userNumber = parseInt(prompt('Inserisci un numero'));
+//     const total = userNumber + 12;
 
-    console.log(`Il risultato finale è ${total}`);
-}
-addNumbers();
+//     console.log(`Il risultato finale è ${total}`);
+// }
+// addNumbers();
 
 //funzione: dato un input numerico restituiscimi il numero +12
 
@@ -68,26 +68,51 @@ addNumbers();
 //anche in questo caso sarebbe meglio avere un argomento della funzione come input
 //in modo da poter poi riutilizzare il codice
 
-// // ESERCIZIO 4
-// function checkAccess() {
-//     const addresses = [
-//         'mymail@mail.com',
-//         'yourmail@mail.com',
-//         'hermail@mail.com',
-//         'hismail@mail.com',
-//     ];
-//     const userEmail = prompt('Inserisci il tuo indirizzo email');
+// ESERCIZIO 4
+function checkAccess() {
+    const addresses = [
+        'mymail@mail.com',
+        'yourmail@mail.com',
+        'hermail@mail.com',
+        'hismail@mail.com',
+    ];
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
+    let grantAccess = 'false';
 
-//     let grantAccess = 'false';
 
-//     if (addresses.includes(userEmail)) {
-//         grantAccess = 'true';
-//     }
+    if (addresses.includes(userEmail)) {
+        grantAccess = 'true';
+    }
 
-//     if (grantAccess === true) {
-//         console.log('Accesso consentito!');
-//     } else {
-//         console.log('Accesso negato!');
-//     }
-// }
-// checkAccess();
+    if (grantAccess === 'true') {
+        console.log('Accesso consentito!');
+    } else {
+        console.log('Accesso negato!');
+    }
+}
+checkAccess();
+
+//la funzione verifica se l'email inserita è autorizzata o no, attraverso un tag flag
+
+//il bug era dovuto all'ultima condizione logica if/else, dato che stavamo verificando
+//una stringa e invece abbiamo inserito un dato booleano nella condizione
+
+//secondo la logica della funzione non avremmo bisogno della nostra variabile flag
+//ESEMPIO
+
+function checkAccess2() {
+    const addresses = [
+        'mymail@mail.com',
+        'yourmail@mail.com',
+        'hermail@mail.com',
+        'hismail@mail.com',
+    ];
+    const userEmail = prompt('Inserisci il tuo indirizzo email');
+
+    if (addresses.includes(userEmail)) {
+        console.log('Accesso consentito!');
+    } else {
+        console.log('Accesso negato!');
+    }
+}
+checkAccess2();
