@@ -11,9 +11,9 @@
 
 
 // ESERCIZIO 1
-for (let i = 0; i < 5; i++) {
-    console.log(i);
-}
+// for (let i = 0; i < 5; i++) {
+//     console.log(i);
+// }
 
 //ad ogni iterazione il codice mi fa un log di i
 
@@ -23,14 +23,24 @@ for (let i = 0; i < 5; i++) {
 //nulla da segnalare
 
 
-// // ESERCIZIO 2
-// function addIfEven(num) {
-//     if (num % 2 = 0) {
-//         return num + 5;
-//     }
-//     return num;
-// }
+// ESERCIZIO 2
+function addIfEven(num) {
+    if (num % 2 === 0) {
+        return num + 5;
+    }
+    return num;
+}
 
+console.log(addIfEven(10), addIfEven(7));
+
+//dato un numero in ingresso, se pari aggiungi 5 e ritorna il risultato
+//se dispari ritora solo il numero
+
+//il bug era dovuto alla condizione del if dove con un solo "=" stiamo assegnando un valore
+//e non comparando
+
+//sicuramente per una funzione cosi piccola potremmo utilizzare un arrowfunction
+// () => num % 2 === 0 ? num + 5 && num ?!
 
 // // ESERCIZIO 3
 // function loopToFive() {
