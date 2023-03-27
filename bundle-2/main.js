@@ -24,14 +24,14 @@
 
 
 // ESERCIZIO 2
-function addIfEven(num) {
-    if (num % 2 === 0) {
-        return num + 5;
-    }
-    return num;
-}
+// function addIfEven(num) {
+//     if (num % 2 === 0) {
+//         return num + 5;
+//     }
+//     return num;
+// }
 
-console.log(addIfEven(10), addIfEven(7));
+// console.log(addIfEven(10), addIfEven(7));
 
 //dato un numero in ingresso, se pari aggiungi 5 e ritorna il risultato
 //se dispari ritora solo il numero
@@ -42,13 +42,19 @@ console.log(addIfEven(10), addIfEven(7));
 //sicuramente per una funzione cosi piccola potremmo utilizzare un arrowfunction
 // () => num % 2 === 0 ? num + 5 && num ?!
 
-// // ESERCIZIO 3
-// function loopToFive() {
-//     for (let i = 0, i < 5, i++) {
-//         console.log(i);
-//     }
-// }
+// ESERCIZIO 3
+function loopToFive() {
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+    }
+}
+console.log(loopToFive());
 
+//ad ogni iterazione il codice mi fa un log di i
+
+//il bug era dovuto agli argomenti del ciclo for divisi da "," anziche ";"
+
+//non ho capito da cosa è dovuta la scritta undefined in console
 
 // // ESERCIZIO 4 (suggerimento: ci sono 8 errori)
 // function displayEvenNumbers() {
